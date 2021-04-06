@@ -20,4 +20,4 @@
 
 > :Collapse label=Members
 > 
-> [NN](/docs/members/nn)
+> [Carlos Daniel Rincon Mora](/docs/members/CarlosRincon)
