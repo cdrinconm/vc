@@ -2,7 +2,13 @@
 
 > :Collapse label=Workshops
 > 
-> [Imaging & Video](/docs/workshops/imaging)
+> > :Collapse label=Imaging & Video
+> >
+> > [Convolución](/docs/workshops/convolution)
+> > [Blanco & Negro](/docs/workshops/byn)
+> > [Ascii Art](/docs/workshops/ascii)
+> > [Mosaico](/docs/workshops/mosaic)
+>
 > [Rendering](/docs/workshops/rendering)
 > [Algovis](/docs/workshops/algovis)
 > [Computer Graphics](/docs/workshops/cg)
@@ -20,4 +26,7 @@
 
 > :Collapse label=Members
 > 
-> [Carlos Daniel Rincon Mora](/docs/members/CarlosRincon)
+> [Nicolas Rodriguez Salguero](/docs/team/NicolasRS)
+> [Carlos Daniel Rincon Mora](/docs/team/CarlosRincon)
+> [Mateo Aguilar Cardona](/docs/team/Mateo)
+> [Danny Esteban Garzón Melo](/docs/team/Danny)
