@@ -8,6 +8,7 @@
 > > [Blanco & Negro](/docs/workshops/byn)
 > > [Ascii Art](/docs/workshops/ascii)
 > > [Mosaico](/docs/workshops/mosaic)
+> > [Conclusiones](/docs/workshops/taller1conclusiones)
 >
 > [Rendering](/docs/workshops/rendering)
 > [Algovis](/docs/workshops/algovis)

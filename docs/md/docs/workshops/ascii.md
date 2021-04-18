@@ -18,11 +18,6 @@ El American Standard Code for Information Interchange, o ASCII, es un estándar 
 
 --> :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/ascii_art.js, width=720, height=500
 
-# Conclusiones & Trabajo Futuro
-
-- asdasd
-- asdasd
-
 # Referencias
 
 - asdasd

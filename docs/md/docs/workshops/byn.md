@@ -215,11 +215,6 @@ Hacer click para correr el video.
 > > > }
 > > ```
 
-# Conclusiones & Trabajo Futuro
-
-- asdasd
-- asdasd
-
 # Referencias
 
 - asdasd

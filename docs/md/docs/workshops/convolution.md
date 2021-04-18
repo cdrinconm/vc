@@ -92,11 +92,6 @@ La matriz de convolución es una matriz de datos que permite, entre otros, detec
 > > > }
 > > ```
 
-# Conclusiones & Trabajo Futuro
-
-- asdasd
-- asdasd
-
 # Referencias
 
 - asdasd
