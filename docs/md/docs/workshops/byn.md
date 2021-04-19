@@ -2,7 +2,7 @@
 
 ## Planteamiento del Problema
 
-Convertir una imagen a color en escala de grises usando el promedio RGB y Luma.
+Convertir una imagen a color a escala de grises usando el promedio RGB y Luma.
 
 ## Antecedentes
 
@@ -15,7 +15,7 @@ Antiguamente las imágenes estaban solamente presentadas en escalas de grises, e
 El promedio RGB, como lo indica su nombre, solo hace uso del promedio de los valores en la escala RGB para calcular la luminosidad del píxel y de esta manera transformarlo a escala de grises.
 
 > :Tabs
-> > :Tab title=Resultado
+> > :Tab title=Original & Resultado
 > > 
 > > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/bnrgb.js, width=720, height=500
 >
@@ -80,7 +80,7 @@ Luma, por otro lado, es definida como la corrección de gamma en una señal de v
 El resultado es el siguiente:
 
 > :Tabs
-> > :Tab title=Resultado
+> > :Tab title=Original & Resultado
 > > 
 > > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/luma.js, width=720, height=500
 >
@@ -187,7 +187,7 @@ Luego realizamos la conversion de un video a escala de grises y obtenemos el sig
 Hacer click para correr el video.
 
 > :Tabs
-> > :Tab title=Resultado
+> > :Tab title=Original & Resultado
 > > 
 > > > :P5 sketch=/docs/sketches/videobn.js, width=720, height=240
 >
@@ -217,7 +217,8 @@ Hacer click para correr el video.
 
 # Referencias
 
-- asdasd
-- asdasd
+- [Respuestas ME](https://respuestas.me/q/ca-lculo-promedio-de-dos-valores-rgb-60927652686)
+- [PTC Support](http://support.ptc.com/help/mathcad/es/index.html#page/PTC_Mathcad_Help/example_grayscale_and_color_in_images.html)
+- [Wikipedia RGB](https://es.wikipedia.org/wiki/RGB)
 
 > :ToCPrevNext

@@ -33,13 +33,9 @@ var nomimg = [
   "0_170_85", //25
   "0_85_170"
 ];
-var imagenes = [];
 
-function preload() {
+function preload() { 
   img = loadImage("../sketches/Ryuk.jpg");
-  for (var i = 0; i < nomimg.length; i++) {
-    imagenes.push(loadImage("../sketches/Colores/" + nomimg[i] + ".jpg"));
-  }
 }
 
 function setup() {
