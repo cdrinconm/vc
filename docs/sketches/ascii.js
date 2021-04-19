@@ -7,7 +7,7 @@ var caracteres = ['#', 'B', 'M', 'D', '*', 'm', 't', 'p', 'o', ';', ':', '-', 'Â
 //var caracteres = ['#', 'o', '.'];
 
 function preload() {
-  img = loadImage("../sketches/Ryuk.jpg");
+  img = loadImage("../sketches/dodge.png");
 }
 
 function setup() {
