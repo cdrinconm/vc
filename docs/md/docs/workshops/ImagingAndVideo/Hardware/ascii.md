@@ -1,4 +1,4 @@
-# Convolucion de Imagenes
+# Convolucion de Imagenes - Hardware
 
 ## Planteamiento del Problema
 
@@ -15,7 +15,7 @@ El American Standard Code for Information Interchange, o ASCII, es un estándar 
 > :Tabs
 > > :Tab title=Original
 > > 
-> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/JsImagesOrigin/DodgeOriginal.js, width=720, height=500
+> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/JsImagesOriginal/DodgeOriginal.js, width=720, height=500
 >
 > > :Tab title=Resultado
 > > 

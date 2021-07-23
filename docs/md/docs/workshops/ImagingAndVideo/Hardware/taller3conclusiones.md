@@ -1,4 +1,4 @@
-# Conclusiones & Trabajo Futuro - Imaging & Video
+# Conclusiones & Trabajo Futuro - Imaging & Video - Hardware
 
 Al momento de estudiar el proceso de creación y manipulación de una imagen digital a una aplicación visual moderna, podemos encontrar muchas tecnica y efectos muy interesantes. Sin embargo, entender la teoria detras de las imagenes y videos es de suprema importancia.
 

@@ -1,4 +1,4 @@
-# Conversión a Escala de Grises
+# Conversión a Escala de Grises - Hardware
 
 ## Planteamiento del Problema
 
@@ -17,7 +17,7 @@ El promedio RGB, como lo indica su nombre, solo hace uso del promedio de los val
 > :Tabs
 > > :Tab title=Original & Resultado
 > > 
-> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/bnrgb.js, width=720, height=500
+> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/Taller1/ImagingAndVideo/bnrgb.js, width=720, height=500
 >
 > > :Tab title=Codigo
 > >
@@ -26,8 +26,8 @@ El promedio RGB, como lo indica su nombre, solo hace uso del promedio de los val
 > > > let imgOriginal;
 > > > 
 > > > function preload() {
-> > > 	img = loadImage('../sketches/WolvCar.png');
-> > > 	imgOriginal = loadImage('../sketches/WolvCar.png');
+> > > 	img = loadImage('../sketches/Taller1/ImagingAndVideo/WolvCar.png');
+> > > 	imgOriginal = loadImage('../sketches/Taller1/ImagingAndVideo/WolvCar.png');
 > > > }
 > > > 
 > > > function setup() {
@@ -82,7 +82,7 @@ El resultado es el siguiente:
 > :Tabs
 > > :Tab title=Original & Resultado
 > > 
-> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/luma.js, width=720, height=500
+> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/Taller1/ImagingAndVideo/luma.js, width=720, height=500
 >
 > > :Tab title=Codigo
 > >
@@ -91,8 +91,8 @@ El resultado es el siguiente:
 > > > let imgOriginal;
 > > > 
 > > > function preload() {
-> > >     img = loadImage('../sketches/WolvCar.png');
-> > > 	  imgOriginal = loadImage('../sketches/WolvCar.png');
+> > >     img = loadImage('../sketches/Taller1/ImagingAndVideo/WolvCar.png');
+> > > 	  imgOriginal = loadImage('../sketches/Taller1/ImagingAndVideo/WolvCar.png');
 > > > }
 > > > 
 > > > function setup() {
@@ -126,7 +126,7 @@ Si realizamos la comparacion entre el metodo de promedio RGB y Luma, podemos not
 > :Tabs
 > > :Tab title=Resultado
 > > 
-> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/bnrgbvsluma.js, width=720, height=500
+> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/Taller1/ImagingAndVideo/bnrgbvsluma.js, width=720, height=500
 >
 > > :Tab title=Codigo
 > >
@@ -135,8 +135,8 @@ Si realizamos la comparacion entre el metodo de promedio RGB y Luma, podemos not
 > > > let imgOriginal;
 > > > 
 > > > function preload() {
-> > >     img = loadImage('../sketches/WolvCar.png');
-> > > 	imgOriginal = loadImage('../sketches/WolvCar.png');
+> > >     img = loadImage('../sketches/Taller1/ImagingAndVideo/WolvCar.png');
+> > > 	imgOriginal = loadImage('../sketches/Taller1/ImagingAndVideo/WolvCar.png');
 > > > }
 > > > 
 > > > function setup() {

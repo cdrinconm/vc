@@ -1,4 +1,4 @@
-# Image and video processing
+# Image and Video Processing - Software
 
 ## Propósito
 

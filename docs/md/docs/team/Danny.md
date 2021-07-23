@@ -13,14 +13,12 @@ Soy Estudiante de ingeniería de sistemas de últimos semestres, interesado en l
 
 ## Contribuciones
 
-Sigo de cerca el trabajo sobre plataformas para la creación de mods, en especial FOrge para MC y Skyrim, 
-
+Sigo de cerca el trabajo sobre plataformas para la creación de mods, en especial Forge para MC y Skyrim, 
 
 ## Hobbies
 - Modding
 - Senderismo
 - Pedagogía
-- 
 
 ## Rotating circles
 

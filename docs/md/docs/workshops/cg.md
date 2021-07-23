@@ -1,3 +1,5 @@
 # Computer Graphics
 
+## ¡Proximamente!
+
 > :ToCPrevNext

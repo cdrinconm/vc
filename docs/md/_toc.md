@@ -4,13 +4,29 @@
 > 
 > > :Collapse label=Imaging & Video
 > >
-> > [Convolución](/docs/workshops/convolution)
-> > [Blanco & Negro](/docs/workshops/byn)
-> > [Ascii Art](/docs/workshops/ascii)
-> > [Mosaico](/docs/workshops/mosaic)
-> > [Conclusiones](/docs/workshops/taller1conclusiones)
+> > > :Collapse label=Software
+> > > 
+> > > [Ejercicio](/docs/workshops/ImagingAndVideo/Software/imaging)
+> > > [Blanco & Negro](/docs/workshops/ImagingAndVideo/Software/byn)
+> > > [Convolución](/docs/workshops/ImagingAndVideo/Software/convolution)
+> > > [Ascii Art](/docs/workshops/ImagingAndVideo/Software/ascii)
+> > > [Mosaico](/docs/workshops/ImagingAndVideo/Software/mosaic)
+> > > [Conclusiones](/docs/workshops/ImagingAndVideo/Software/taller1conclusiones)
+> > 
+> > > :Collapse label=Hardware
+> > > 
+> > > [Ejercicio](/docs/workshops/ImagingAndVideo/Hardware/hardware)
+> > > [Blanco & Negro](/docs/workshops/ImagingAndVideo/Hardware/byn)
+> > > [Convolución](/docs/workshops/ImagingAndVideo/Hardware/convolution)
+> > > [Ascii Art](/docs/workshops/ImagingAndVideo/Hardware/ascii)
+> > > [Mosaico](/docs/workshops/ImagingAndVideo/Hardware/mosaic)
+> > > [Conclusiones](/docs/workshops/ImagingAndVideo/Hardware/taller3conclusiones)
 >
-> [Rendering](/docs/workshops/rendering)
+> > :Collapse label=Rendering
+> > 
+> > [Ejercicio](/docs/workshops/Rendering/rendering)
+> > [Lightcuts](/docs/workshops/Rendering/renderingSolucion)
+>
 > [Algovis](/docs/workshops/algovis)
 > [Computer Graphics](/docs/workshops/cg)
 > [HCI](/docs/workshops/hci)

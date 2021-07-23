@@ -1,4 +1,4 @@
-# Foto mosaico
+# Foto mosaico - Software
 
 ## Planteamiento del Problema
 
@@ -21,11 +21,11 @@ El mosaico también se relaciona con el Puntillismo, un tipo de estilo de pintur
 > :Tabs
 > > :Tab title=Resultado
 > > 
-> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/mosaico.js, width=720, height=500
+> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/Taller1/ImagingAndVideo/mosaico.js, width=720, height=500
 >
 > > :Tab title=Original
 > > 
-> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/JsImagesOrigin/RyukOriginal.js, width=720, height=500
+> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/Taller1/ImagenesOriginales/RyukOriginal.js, width=720, height=500
 >
 > > :Tab title=Codigo
 > >
@@ -68,9 +68,9 @@ El mosaico también se relaciona con el Puntillismo, un tipo de estilo de pintur
 > > > var imagenes = [];
 > > > 
 > > > function preload() {
-> > >   img = loadImage("../sketches/Ryuk.jpg");
+> > >   img = loadImage('/vc/docs/sketches/Taller1/ImagingAndVideo/Ryuk.jpg');
 > > >   for (var i = 0; i < nomimg.length; i++) {
-> > >     imagenes.push(loadImage("../sketches/Colores/" + nomimg[i] + ".jpg"));
+> > >       imagenes.push(loadImage("/vc/docs/sketches/Taller1/ImagenesMosaico/" + nomimg[i] + ".jpg"));
 > > >   }
 > > > }
 > > > 
@@ -249,7 +249,7 @@ Esperar hasta que cargue la imagen, y visualizar como cada pequeña imagen se va
 > :Tabs
 > > :Tab title=Resultado
 > > 
-> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/mosaicollenado.js, width=720, height=500
+> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/Taller1/ImagingAndVideo/mosaicollenado.js, width=720, height=500
 >
 > > :Tab title=Codigo
 > >
@@ -291,7 +291,7 @@ Esperar hasta que cargue la imagen, y visualizar como cada pequeña imagen se va
 > > > ];
 > > > 
 > > > function preload() {
-> > >   img = loadImage("../sketches/Ryuk.jpg");
+> > >   img = loadImage('/vc/docs/sketches/Taller1/ImagingAndVideo/Ryuk.jpg');
 > > > }
 > > > 
 > > > function setup() {

@@ -2,8 +2,8 @@ let img;
 let imgOriginal;
 
 function preload() {
-    img = loadImage('../sketches/WolvCar.png');
-	imgOriginal = loadImage('../sketches/WolvCar.png');
+    img = loadImage('/vc/docs/sketches/Taller1/ImagingAndVideo/WolvCar.png');
+	imgOriginal = loadImage('/vc/docs/sketches/Taller1/ImagingAndVideo/WolvCar.png');
 }
 
 function setup() {

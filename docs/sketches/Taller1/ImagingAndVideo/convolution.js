@@ -10,7 +10,7 @@ const matrix = [[-1, -1, -1],
                 [-1, -1, -1]];
 
 function preload() {
-  img = loadImage('../sketches/Wolv.jpg');
+  img = loadImage('/vc/docs/sketches/Taller1/ImagingAndVideo/Wolv.jpg');
 }
 
 function setup() {

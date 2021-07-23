@@ -1,5 +1,5 @@
 var img;
-var pixeles = 1;
+var pixeles = 3;
 var line;
 let pospixel;
 let posy = pixeles;
@@ -7,7 +7,7 @@ var caracteres = ['#', 'B', 'M', 'D', '*', 'm', 't', 'p', 'o', ';', ':', '-', 'Â
 //var caracteres = ['#', 'o', '.'];
 
 function preload() {
-  img = loadImage("../sketches/dodge.png");
+  img = loadImage('/vc/docs/sketches/Taller1/ImagingAndVideo/dodge.png');
 }
 
 function setup() {

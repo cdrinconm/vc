@@ -1,4 +1,4 @@
-# Convolucion de Imagenes
+# Convolucion de Imagenes - Software
 
 ## Planteamiento del Problema
 
@@ -23,11 +23,11 @@ Consideraremos solo las matrices 3x3, son las más usadas y son suficiente para 
 > :Tabs
 > > :Tab title=Original
 > > 
-> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/JsImagesOrigin/WolvOriginal.js, width=720, height=500
+> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/Taller1/ImagenesOriginales/WolvOriginal.js, width=720, height=500
 >
 > > :Tab title=Resultado
 > > 
-> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/convolution.js, width=720, height=500
+> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/Taller1/ImagingAndVideo/convolution.js, width=720, height=500
 >
 > > :Tab title=Codigo
 > >
@@ -45,7 +45,7 @@ Consideraremos solo las matrices 3x3, son las más usadas y son suficiente para 
 > > >                 [-1, -1, -1]];
 > > > 
 > > > function preload() {
-> > >   img = loadImage('../sketches/Wolv.jpg');
+> > >   img = loadImage('/vc/docs/sketches/Taller1/ImagingAndVideo/Wolv.jpg');
 > > > }
 > > > 
 > > > function setup() {
