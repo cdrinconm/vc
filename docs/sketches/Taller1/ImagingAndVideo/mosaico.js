@@ -3,7 +3,7 @@ var promediorojo;
 var promedioazul;
 var promedioverde;
 var rgb;
-var pixeles = 10;
+var pixeles = 5;
 var nomimg = [
   "0_0_0", //0
   "0_0_85",
@@ -33,9 +33,13 @@ var nomimg = [
   "0_170_85", //25
   "0_85_170"
 ];
+var imagenes = [];
 
-function preload() { 
-  img = loadImage("../sketches/Ryuk.jpg");
+function preload() {
+  img = loadImage('/vc/docs/sketches/Taller1/ImagingAndVideo/Ryuk.jpg');
+  for (var i = 0; i < nomimg.length; i++) {
+    imagenes.push(loadImage("/vc/docs/sketches/Taller1/ImagenesMosaico/" + nomimg[i] + ".jpg"));
+  }
 }
 
 function setup() {
@@ -49,8 +53,8 @@ function setup() {
       promedioazul = 0;
       promedioverde = 0;
       datospixeles = img.get(i, j, pixeles, pixeles);
-      for (var k = 0; k < datospixeles.width; k++) {
-        for (var l = 0; l < datospixeles.height; l++) {
+      for (var k = 0; k < pixeles; k++) {
+        for (var l = 0; l < pixeles; l++) {
           rgb = datospixeles.get(k,l);
           promediorojo += rgb[0];
           promedioazul += rgb[1];
@@ -68,9 +72,7 @@ function setup() {
 }
 
 function cargarImagen(nombre, x, y, dim){
-  loadImage("../sketches/Colores/" + nombre + ".jpg", img => {
-    image(img, x, y, dim, dim);
-  });
+  image(nombre, x, y, dim, dim);
 }
 
 function buscarImagen(r, g, b, x, y, pixeles){
@@ -80,39 +82,39 @@ function buscarImagen(r, g, b, x, y, pixeles){
         case g >= 170:
           switch(true){
             case b >= 170:
-              cargarImagen(nomimg[20], x, y, pixeles);
+              cargarImagen(imagenes[20], x, y, pixeles);
               break;
             case b >= 85:
-              cargarImagen(nomimg[19], x, y, pixeles);
+              cargarImagen(imagenes[19], x, y, pixeles);
               break;
             case b >= 0:
-              cargarImagen(nomimg[12], x, y, pixeles);
+              cargarImagen(imagenes[12], x, y, pixeles);
               break;
           }
           break;
         case g >= 85:
           switch(true){
             case b >= 170:
-              cargarImagen(nomimg[18], x, y, pixeles);
+              cargarImagen(imagenes[18], x, y, pixeles);
               break;
             case b >= 85:
-              cargarImagen(nomimg[17], x, y, pixeles);
+              cargarImagen(imagenes[17], x, y, pixeles);
               break;
             case b >= 0:
-              cargarImagen(nomimg[21], x, y, pixeles);
+              cargarImagen(imagenes[21], x, y, pixeles);
               break;
           }
           break;
         case g >= 0:
           switch(true){
             case b >= 170:
-              cargarImagen(nomimg[11], x, y, pixeles);
+              cargarImagen(imagenes[11], x, y, pixeles);
               break;
             case b >= 85:
-              cargarImagen(nomimg[22], x, y, pixeles);
+              cargarImagen(imagenes[22], x, y, pixeles);
               break;
             case b >= 0:
-              cargarImagen(nomimg[10], x, y, pixeles);
+              cargarImagen(imagenes[10], x, y, pixeles);
               break;
           }
           break;
@@ -123,39 +125,39 @@ function buscarImagen(r, g, b, x, y, pixeles){
         case g >= 170:
           switch(true){
             case b >= 170:
-              cargarImagen(nomimg[16], x, y, pixeles);
+              cargarImagen(imagenes[16], x, y, pixeles);
               break;
             case b >= 85:
-              cargarImagen(nomimg[15], x, y, pixeles);
+              cargarImagen(imagenes[15], x, y, pixeles);
               break;
             case b >= 0:
-              cargarImagen(nomimg[23], x, y, pixeles);
+              cargarImagen(imagenes[23], x, y, pixeles);
               break;
           }
           break;
         case g >= 85:
           switch(true){
             case b >= 170:
-              cargarImagen(nomimg[14], x, y, pixeles);
+              cargarImagen(imagenes[14], x, y, pixeles);
               break;
             case b >= 85:
-              cargarImagen(nomimg[13], x, y, pixeles);
+              cargarImagen(imagenes[13], x, y, pixeles);
               break;
             case b >= 0:
-              cargarImagen(nomimg[6], x, y, pixeles);
+              cargarImagen(imagenes[6], x, y, pixeles);
               break;
           }
           break;
         case g >= 0:
           switch(true){
             case b >= 170:
-              cargarImagen(nomimg[24], x, y, pixeles);
+              cargarImagen(imagenes[24], x, y, pixeles);
               break;
             case b >= 85:
-              cargarImagen(nomimg[5], x, y, pixeles);
+              cargarImagen(imagenes[5], x, y, pixeles);
               break;
             case b >= 0:
-              cargarImagen(nomimg[4], x, y, pixeles);
+              cargarImagen(imagenes[4], x, y, pixeles);
               break;
           }
           break;
@@ -166,39 +168,39 @@ function buscarImagen(r, g, b, x, y, pixeles){
         case g >= 170:
           switch(true){
             case b >= 170:
-              cargarImagen(nomimg[9], x, y, pixeles);
+              cargarImagen(imagenes[9], x, y, pixeles);
               break;
             case b >= 85:
-              cargarImagen(nomimg[25], x, y, pixeles);
+              cargarImagen(imagenes[25], x, y, pixeles);
               break;
             case b >= 0:
-              cargarImagen(nomimg[8], x, y, pixeles);
+              cargarImagen(imagenes[8], x, y, pixeles);
               break;
           }
           break;
         case g >= 85:
           switch(true){
             case b >= 170:
-              cargarImagen(nomimg[26], x, y, pixeles);
+              cargarImagen(imagenes[26], x, y, pixeles);
               break;
             case b >= 85:
-              cargarImagen(nomimg[3], x, y, pixeles);
+              cargarImagen(imagenes[3], x, y, pixeles);
               break;
             case b >= 0:
-              cargarImagen(nomimg[2], x, y, pixeles);
+              cargarImagen(imagenes[2], x, y, pixeles);
               break;
           }
           break;
         case g >= 0:
           switch(true){
             case b >= 170:
-              cargarImagen(nomimg[7], x, y, pixeles);
+              cargarImagen(imagenes[7], x, y, pixeles);
               break;
             case b >= 85:
-              cargarImagen(nomimg[1], x, y, pixeles);
+              cargarImagen(imagenes[1], x, y, pixeles);
               break;
             case b >= 0:
-              cargarImagen(nomimg[0], x, y, pixeles);
+              cargarImagen(imagenes[0], x, y, pixeles);
               break;
           }
           break;

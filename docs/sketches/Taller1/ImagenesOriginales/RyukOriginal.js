@@ -1,7 +1,7 @@
 let img;
 
 function preload() {
-  img = loadImage('../sketches/Ryuk.jpg');
+  img = loadImage('/vc/docs/sketches/Taller1/ImagingAndVideo/Ryuk.jpg');
 }
 
 function setup() {

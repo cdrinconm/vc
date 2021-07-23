@@ -1,7 +1,7 @@
 let img;
 
 function preload() {
-  img = loadImage('../sketches/Wolv.jpg');
+  img = loadImage('/vc/docs/sketches/Taller1/ImagingAndVideo/dodge.png');
 }
 
 function setup() {
