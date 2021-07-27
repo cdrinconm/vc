@@ -62,5 +62,4 @@ void main() {
     gl_FragColor = texture2D(symbol2, symbolCoord) * vVertexColor;
   else
     gl_FragColor = texture2D(symbol1, symbolCoord) * vVertexColor;
-
 }

@@ -39,7 +39,6 @@ varying vec4 vVertexColor;
 varying vec2 vTexCoord;
 
 void main() {
-
   vec2 symbolCoord = vTexCoord * resolution;
   vec2 imageCoord = floor(symbolCoord);
   symbolCoord = symbolCoord - imageCoord;
