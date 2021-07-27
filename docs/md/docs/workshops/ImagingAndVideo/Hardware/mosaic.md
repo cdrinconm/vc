@@ -20,215 +20,101 @@ Realizar la conversion de una imagen a un foto mosaico por Hardware.
 > > :Tab title=Codigo
 > >
 > > ```md
-> > > var img;
-> > > var promediorojo;
-> > > var promedioazul;
-> > > var promedioverde;
-> > > var rgb;
-> > > var pixeles = 5;
-> > > var nomimg = [
-> > >   "0_0_0", //0
-> > >   "0_0_85",
-> > >   "0_85_0",
-> > >   "0_85_85",
-> > >   "85_0_0",
-> > >   "85_0_85", //5
-> > >   "85_85_0",
-> > >   "0_0_170",
-> > >   "0_170_0",
-> > >   "0_170_170",
-> > >   "170_0_0", //10
-> > >   "170_0_170",
-> > >   "170_170_0",
-> > >   "85_85_85",
-> > >   "85_85_170",
-> > >   "85_170_85", //15
-> > >   "85_170_170",
-> > >   "170_85_85",
-> > >   "170_85_170",
-> > >   "170_170_85",
-> > >   "170_170_170", //20
-> > >   "170_85_0",
-> > >   "170_0_85",
-> > >   "85_170_0",
-> > >   "85_0_170",
-> > >   "0_170_85", //25
-> > >   "0_85_170"
-> > > ];
-> > > var imagenes = [];
+> > > precision mediump float;
 > > > 
-> > > function preload() {
-> > >   img = loadImage("../sketches/Ryuk.jpg");
-> > >   for (var i = 0; i < nomimg.length; i++) {
-> > >     imagenes.push(loadImage("../sketches/Colores/" + nomimg[i] + ".jpg"));
-> > >   }
-> > > }
+> > > uniform sampler2D image;
 > > > 
-> > > function setup() {
-> > >   noStroke();
-> > >   img.resize(720, 500);
-> > >   createCanvas(720, 500);
-> > >   img.loadPixels();
-> > >   for (var i = 0; i < img.width; i++) {
-> > >     for (var j = 0; j < img.height; j++) {
-> > >       promediorojo = 0;
-> > >       promedioazul = 0;
-> > >       promedioverde = 0;
-> > >       datospixeles = img.get(i, j, pixeles, pixeles);
-> > >       for (var k = 0; k < pixeles; k++) {
-> > >         for (var l = 0; l < pixeles; l++) {
-> > >           rgb = datospixeles.get(k,l);
-> > >           promediorojo += rgb[0];
-> > >           promedioazul += rgb[1];
-> > >           promedioverde += rgb[2];
-> > >         }
-> > >       }      
-> > >       promediorojo /= (pixeles * pixeles);
-> > >       promedioazul /= (pixeles * pixeles);
-> > >       promedioverde /= (pixeles * pixeles);
-> > >       buscarImagen(promediorojo,promedioazul,promedioverde, i, j, pixeles);
-> > >       j += pixeles-1;
-> > >     }
-> > >     i += pixeles-1;
-> > >   }
-> > > }
+> > > uniform sampler2D symbol1;
+> > > uniform sampler2D symbol2;
+> > > uniform sampler2D symbol3;
+> > > uniform sampler2D symbol4;
+> > > uniform sampler2D symbol5;
+> > > uniform sampler2D symbol6;
+> > > uniform sampler2D symbol7;
+> > > uniform sampler2D symbol8;
+> > > uniform sampler2D symbol9;
+> > > uniform sampler2D symbol10;
+> > > uniform sampler2D symbol11;
+> > > uniform sampler2D symbol12;
+> > > uniform sampler2D symbol13;
+> > > uniform sampler2D symbol14;
+> > > uniform sampler2D symbol15;
+> > > uniform sampler2D symbol16;
+> > > uniform sampler2D symbol17;
+> > > uniform sampler2D symbol18;
+> > > uniform sampler2D symbol19;
+> > > uniform sampler2D symbol20;
+> > > uniform sampler2D symbol21;
+> > > uniform sampler2D symbol22;
+> > > uniform sampler2D symbol23;
+> > > uniform sampler2D symbol24;
+> > > uniform sampler2D symbol25;
+> > > uniform sampler2D symbol26;
+> > > uniform sampler2D symbol27;
 > > > 
-> > > function cargarImagen(nombre, x, y, dim){
-> > >   image(nombre, x, y, dim, dim);
-> > > }
+> > > uniform bool debug;
 > > > 
-> > > function buscarImagen(r, g, b, x, y, pixeles){
-> > >   switch(true){
-> > >     case r >= 170:
-> > >       switch(true){
-> > >         case g >= 170:
-> > >           switch(true){
-> > >             case b >= 170:
-> > >               cargarImagen(imagenes[20], x, y, pixeles);
-> > >               break;
-> > >             case b >= 85:
-> > >               cargarImagen(imagenes[19], x, y, pixeles);
-> > >               break;
-> > >             case b >= 0:
-> > >               cargarImagen(imagenes[12], x, y, pixeles);
-> > >               break;
-> > >           }
-> > >           break;
-> > >         case g >= 85:
-> > >           switch(true){
-> > >             case b >= 170:
-> > >               cargarImagen(imagenes[18], x, y, pixeles);
-> > >               break;
-> > >             case b >= 85:
-> > >               cargarImagen(imagenes[17], x, y, pixeles);
-> > >               break;
-> > >             case b >= 0:
-> > >               cargarImagen(imagenes[21], x, y, pixeles);
-> > >               break;
-> > >           }
-> > >           break;
-> > >         case g >= 0:
-> > >           switch(true){
-> > >             case b >= 170:
-> > >               cargarImagen(imagenes[11], x, y, pixeles);
-> > >               break;
-> > >             case b >= 85:
-> > >               cargarImagen(imagenes[22], x, y, pixeles);
-> > >               break;
-> > >             case b >= 0:
-> > >               cargarImagen(imagenes[10], x, y, pixeles);
-> > >               break;
-> > >           }
-> > >           break;
-> > >       }
-> > >       break;
-> > >     case r >= 85:
-> > >       switch(true){
-> > >         case g >= 170:
-> > >           switch(true){
-> > >             case b >= 170:
-> > >               cargarImagen(imagenes[16], x, y, pixeles);
-> > >               break;
-> > >             case b >= 85:
-> > >               cargarImagen(imagenes[15], x, y, pixeles);
-> > >               break;
-> > >             case b >= 0:
-> > >               cargarImagen(imagenes[23], x, y, pixeles);
-> > >               break;
-> > >           }
-> > >           break;
-> > >         case g >= 85:
-> > >           switch(true){
-> > >             case b >= 170:
-> > >               cargarImagen(imagenes[14], x, y, pixeles);
-> > >               break;
-> > >             case b >= 85:
-> > >               cargarImagen(imagenes[13], x, y, pixeles);
-> > >               break;
-> > >             case b >= 0:
-> > >               cargarImagen(imagenes[6], x, y, pixeles);
-> > >               break;
-> > >           }
-> > >           break;
-> > >         case g >= 0:
-> > >           switch(true){
-> > >             case b >= 170:
-> > >               cargarImagen(imagenes[24], x, y, pixeles);
-> > >               break;
-> > >             case b >= 85:
-> > >               cargarImagen(imagenes[5], x, y, pixeles);
-> > >               break;
-> > >             case b >= 0:
-> > >               cargarImagen(imagenes[4], x, y, pixeles);
-> > >               break;
-> > >           }
-> > >           break;
-> > >       }
-> > >       break;
-> > >     case r >= 0:
-> > >       switch(true){
-> > >         case g >= 170:
-> > >           switch(true){
-> > >             case b >= 170:
-> > >               cargarImagen(imagenes[9], x, y, pixeles);
-> > >               break;
-> > >             case b >= 85:
-> > >               cargarImagen(imagenes[25], x, y, pixeles);
-> > >               break;
-> > >             case b >= 0:
-> > >               cargarImagen(imagenes[8], x, y, pixeles);
-> > >               break;
-> > >           }
-> > >           break;
-> > >         case g >= 85:
-> > >           switch(true){
-> > >             case b >= 170:
-> > >               cargarImagen(imagenes[26], x, y, pixeles);
-> > >               break;
-> > >             case b >= 85:
-> > >               cargarImagen(imagenes[3], x, y, pixeles);
-> > >               break;
-> > >             case b >= 0:
-> > >               cargarImagen(imagenes[2], x, y, pixeles);
-> > >               break;
-> > >           }
-> > >           break;
-> > >         case g >= 0:
-> > >           switch(true){
-> > >             case b >= 170:
-> > >               cargarImagen(imagenes[7], x, y, pixeles);
-> > >               break;
-> > >             case b >= 85:
-> > >               cargarImagen(imagenes[1], x, y, pixeles);
-> > >               break;
-> > >             case b >= 0:
-> > >               cargarImagen(imagenes[0], x, y, pixeles);
-> > >               break;
-> > >           }
-> > >           break;
-> > >       }
-> > >       break;
-> > >   }
+> > > uniform float resolution;
+> > > 
+> > > varying vec4 vVertexColor;
+> > > 
+> > > varying vec2 vTexCoord;
+> > > 
+> > > void main() {
+> > > 
+> > >   vec2 symbolCoord = vTexCoord * resolution;
+> > >   vec2 imageCoord = floor(symbolCoord);
+> > >   symbolCoord = symbolCoord - imageCoord;
+> > >   vec4 col = texture2D(image, vTexCoord) * vVertexColor;
+> > >   float grayLuma = dot(col.rgb, vec3(1, 1, 1));
+> > >   float r = col.r * 255.0;
+> > >   float g = col.g * 255.0;
+> > >   float b = col.b * 255.0;
+> > > 
+> > >   if(r > 170.0)
+> > >     if(g > 170.0)
+> > >       if(b > 127.0)
+> > >         gl_FragColor = texture2D(symbol21, symbolCoord) * vVertexColor;
+> > >       else
+> > >         gl_FragColor = texture2D(symbol13, symbolCoord) * vVertexColor;
+> > >     else if(g > 85.0)
+> > >       if(b > 127.0)
+> > >         gl_FragColor = texture2D(symbol18, symbolCoord) * vVertexColor;
+> > >       else
+> > >         gl_FragColor = texture2D(symbol21, symbolCoord) * vVertexColor;
+> > >     else if(b > 127.0)
+> > >       gl_FragColor = texture2D(symbol23, symbolCoord) * vVertexColor;
+> > >     else
+> > >       gl_FragColor = texture2D(symbol11, symbolCoord) * vVertexColor;
+> > >   else if(r > 85.0)
+> > >     if(g > 170.0)
+> > >       if(b > 127.0)
+> > >         gl_FragColor = texture2D(symbol17, symbolCoord) * vVertexColor;
+> > >       else
+> > >         gl_FragColor = texture2D(symbol23, symbolCoord) * vVertexColor;
+> > >     else if(g > 85.0)
+> > >       if(b > 127.0)
+> > >         gl_FragColor = texture2D(symbol15, symbolCoord) * vVertexColor;
+> > >       else
+> > >         gl_FragColor = texture2D(symbol7, symbolCoord) * vVertexColor;
+> > >     else if(b > 127.0)
+> > >       gl_FragColor = texture2D(symbol25, symbolCoord) * vVertexColor;
+> > >     else
+> > >       gl_FragColor = texture2D(symbol5, symbolCoord) * vVertexColor;
+> > >   else if(g > 170.0)
+> > >     if(b > 127.0)
+> > >       gl_FragColor = texture2D(symbol25, symbolCoord) * vVertexColor;
+> > >     else
+> > >       gl_FragColor = texture2D(symbol9, symbolCoord) * vVertexColor;
+> > >   else if(g > 85.0)
+> > >     if(b > 127.0)
+> > >       gl_FragColor = texture2D(symbol27, symbolCoord) * vVertexColor;
+> > >     else
+> > >       gl_FragColor = texture2D(symbol3, symbolCoord) * vVertexColor;
+> > >   else if(b > 127.0)
+> > >     gl_FragColor = texture2D(symbol8, symbolCoord) * vVertexColor;
+> > >   else
+> > >     gl_FragColor = texture2D(symbol1, symbolCoord) * vVertexColor;
 > > > }
 > > ```
 

@@ -20,71 +20,31 @@ Aplicar una mascara de convolucion a una imagen usando una matriz "kernel" por H
 > > :Tab title=Codigo
 > >
 > > ```md
-> > > let img;
-> > > let w = 80;
-> > > const xstart = 0;
-> > > const ystart = 0;
-> > > const matrixsize = 3;
+> > > precision mediump float;
 > > > 
-> > > // It's possible to convolve the image with many different matrices to produce 
-> > > //different effects. This is a high-pass filter; it accentuates the edges. 
-> > > const matrix = [[-1, -1, -1],
-> > >                 [-1,  9, -1],
-> > >                 [-1, -1, -1]];
+> > > uniform sampler2D texture;
 > > > 
-> > > function preload() {
-> > >   img = loadImage('../sketches/Wolv.jpg');
-> > > }
+> > > uniform vec2 texOffset;
 > > > 
-> > > function setup() {
-> > >   img.resize(720,500);
-> > >   // We're only going to process a portion of the image so let's set the whole 
-> > >   // image as the background first
-> > >   img.loadPixels();
-> > >   createCanvas(720, 500);
-> > >   pixelDensity(1);
-> > > }
+> > > uniform float param;
 > > > 
-> > > function draw() {
-> > >   loadPixels();
-> > >   for (let x = xstart; x < img.width; x++) {
-> > >     for (let y = ystart; y < img.height; y++) {
-> > >       let c = convolution(x, y);
-> > >       let loc = (x + y * img.width) * 4;
-> > >       pixels[loc] = red(c);
-> > >       pixels[loc + 1] = green(c);
-> > >       pixels[loc + 2] = blue(c);
-> > >       pixels[loc + 3] = alpha(c);
-> > >     }
-> > >   }
-> > >   updatePixels();
-> > > }
+> > > varying vec4 vVertexColor;
 > > > 
-> > > function convolution(x, y) {
-> > >   let rtotal = 0.0;
-> > >   let gtotal = 0.0;
-> > >   let btotal = 0.0;
-> > >   const offset = Math.floor(matrixsize / 2);
-> > >   for (let i = 0; i < matrixsize; i++) {
-> > >     for (let j = 0; j < matrixsize; j++) {
-> > >       // What pixel are we testing
-> > >       const xloc = (x + i - offset);
-> > >       const yloc = (y + j - offset);
-> > >       let loc = (xloc + img.width * yloc) * 4;
-> > >       // Make sure we haven't walked off our image, we could do better here
-> > >       loc = constrain(loc, 0, img.pixels.length - 1);
-> > >       // Calculate the convolution, retrieve RGB values
-> > >       rtotal += (img.pixels[loc]) * matrix[i][j];
-> > >       gtotal += (img.pixels[loc + 1]) * matrix[i][j];
-> > >       btotal += (img.pixels[loc + 2]) * matrix[i][j];
-> > >     }
-> > >   }
-> > >   // Make sure RGB is within range
-> > >   rtotal = constrain(rtotal, 0, 255);
-> > >   gtotal = constrain(gtotal, 0, 255);
-> > >   btotal = constrain(btotal, 0, 255);
-> > >   // Return the resulting color
-> > >   return color(rtotal, gtotal, btotal);
+> > > varying vec2 vTexCoord;
+> > > 
+> > > void main() {
+> > > 
+> > >   vec4 col0 = texture2D(texture, vTexCoord + vec2(-texOffset.s, -texOffset.t));
+> > >   vec4 col1 = texture2D(texture, vTexCoord + vec2(0.0, -texOffset.t));
+> > >   vec4 col2 = texture2D(texture, vTexCoord + vec2(+texOffset.s, -texOffset.t));
+> > >   vec4 col3 = texture2D(texture, vTexCoord + vec2(-texOffset.s, 0.0));
+> > >   vec4 col4 = texture2D(texture, vTexCoord + vec2(0.0, 0.0));
+> > >   vec4 col5 = texture2D(texture, vTexCoord + vec2(+texOffset.s, 0.0));
+> > >   vec4 col6 = texture2D(texture, vTexCoord + vec2(-texOffset.s, +texOffset.t));
+> > >   vec4 col7 = texture2D(texture, vTexCoord + vec2(0.0, +texOffset.t));
+> > >   vec4 col8 = texture2D(texture, vTexCoord + vec2(+texOffset.s, +texOffset.t));
+> > >   vec4 sum = param * col4 - (col0 + col1 + col2 + col3 + col5 + col6 + col7 + col8);
+> > >   gl_FragColor = vec4(vec3(sum), 1.0) * vVertexColor;
 > > > }
 > > ```
 
@@ -104,24 +64,31 @@ Hacer click para correr el video.
 > > :Tab title=Codigo
 > >
 > > ```md
-> > > let fingers;
+> > > precision mediump float;
 > > > 
-> > > function setup() {
-> > >   createCanvas(780, 240);
-> > >   fingers = createVideo(['/vc/docs/sketches/fingers.mov', 
-> > >   '/vc/docs/sketches/fingers.webm']);
-> > >   fingers.hide();
-> > > }
+> > > uniform sampler2D texture;
 > > > 
-> > > function draw() {
-> > >   image(fingers, 460, 0);
-> > >   filter(GRAY);
-> > >   image(fingers, 0, 0);
-> > > }
+> > > uniform vec2 texOffset;
 > > > 
-> > > function mousePressed() {
-> > >   fingers.loop();
-> > >   background(255);
+> > > uniform float param;
+> > > 
+> > > varying vec4 vVertexColor;
+> > > 
+> > > varying vec2 vTexCoord;
+> > > 
+> > > void main() {
+> > > 
+> > >   vec4 col0 = texture2D(texture, vTexCoord + vec2(-texOffset.s, -texOffset.t));
+> > >   vec4 col1 = texture2D(texture, vTexCoord + vec2(0.0, -texOffset.t));
+> > >   vec4 col2 = texture2D(texture, vTexCoord + vec2(+texOffset.s, -texOffset.t));
+> > >   vec4 col3 = texture2D(texture, vTexCoord + vec2(-texOffset.s, 0.0));
+> > >   vec4 col4 = texture2D(texture, vTexCoord + vec2(0.0, 0.0));
+> > >   vec4 col5 = texture2D(texture, vTexCoord + vec2(+texOffset.s, 0.0));
+> > >   vec4 col6 = texture2D(texture, vTexCoord + vec2(-texOffset.s, +texOffset.t));
+> > >   vec4 col7 = texture2D(texture, vTexCoord + vec2(0.0, +texOffset.t));
+> > >   vec4 col8 = texture2D(texture, vTexCoord + vec2(+texOffset.s, +texOffset.t));
+> > >   vec4 sum = param * col4 - (col0 + col1 + col2 + col3 + col5 + col6 + col7 + col8);
+> > >   gl_FragColor = vec4(vec3(sum), 1.0) * vVertexColor;
 > > > }
 > > ```
 

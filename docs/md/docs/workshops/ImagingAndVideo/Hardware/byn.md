@@ -20,38 +20,18 @@ Convertir una imagen a color a escala de grises usando el promedio RGB y Luma po
 > > :Tab title=Codigo
 > >
 > > ```md
-> > > let img;
-> > > let imgOriginal;
+> > > precision mediump float;
 > > > 
-> > > function preload() {
-> > > 	img = loadImage('../sketches/Taller1/ImagingAndVideo/WolvCar.png');
-> > > 	imgOriginal = loadImage('../sketches/Taller1/ImagingAndVideo/WolvCar.png');
-> > > }
+> > > uniform sampler2D texture;
 > > > 
-> > > function setup() {
-> > > 	createCanvas(780, 500);
-> > > 	pixelDensity(1);
-> > > 	imgOriginal.resize(390,500);
-> > > 	image(imgOriginal, 0, 0);
-> > > }
+> > > varying vec4 vVertexColor;
 > > > 
-> > > function draw() {
-> > > 	img.resize(390,500);
-> > > 	image(img, 390, 0);
-> > > 	img.loadPixels();
-> > > 	for (var y = 0; y < img.height; y++) {
-> > > 		for (var x = 0; x < img.width; x++) {
-> > > 			var index = (x + y * img.width) * 4;
-> > > 			var r = img.pixels[index + 0];
-> > > 			var g = img.pixels[index + 1];
-> > > 			var b = img.pixels[index + 2];
-> > > 			var bw = (r + g + b) / 3;
-> > > 			img.pixels[index + 0] = bw;
-> > > 			img.pixels[index + 1] = bw;
-> > > 			img.pixels[index + 2] = bw;
-> > > 		}
-> > > 	}
-> > > 	img.updatePixels();	
+> > > varying vec2 vTexCoord;
+> > > 
+> > > void main() {
+> > >   vec4 col = texture2D(texture, vTexCoord) * vVertexColor;
+> > >   float grayRGB = dot(col.rgb, vec3(0.333, 0.333, 0.333));
+> > >   gl_FragColor = vec4(vec3(grayRGB), 1.0);
 > > > }
 > > ```
 
@@ -91,35 +71,25 @@ El resultado es el siguiente:
 > > :Tab title=Codigo
 > >
 > > ```md
-> > > let img;
-> > > let imgOriginal;
+> > > precision mediump float;
 > > > 
-> > > function preload() {
-> > >     img = loadImage('../sketches/Taller1/ImagingAndVideo/WolvCar.png');
-> > > 	  imgOriginal = loadImage('../sketches/Taller1/ImagingAndVideo/WolvCar.png');
-> > > }
+> > > uniform sampler2D texture;
 > > > 
-> > > function setup() {
-> > >     createCanvas(780, 500);
-> > >     pixelDensity(1);
-> > >     imgOriginal.resize(390,500);
-> > > 	image(imgOriginal, 0, 0);
-> > >     img.resize(390,500);
-> > >     img.loadPixels();
-> > >     for (var y = 0; y < img.height; y++) {
-> > >         for (var x = 0; x < img.width; x++) {
-> > >             var index = (x + y * img.width) * 4;
-> > >             var r = img.pixels[index + 0];
-> > >             var g = img.pixels[index + 1];
-> > >             var b = img.pixels[index + 2];
-> > >             var luma = r * .299 + g * .587 + b * .0114;
-> > >             img.pixels[index + 0] = luma;
-> > >             img.pixels[index + 1] = luma;
-> > >             img.pixels[index + 2] = luma;
-> > >         }
-> > >     }
-> > >     img.updatePixels();
-> > >     image(img, 390, 0);
+> > > uniform bool form;
+> > > 
+> > > varying vec4 vVertexColor;
+> > > 
+> > > varying vec2 vTexCoord;
+> > > 
+> > > void main() {
+> > >   vec4 col = texture2D(texture, vTexCoord) * vVertexColor;
+> > >   float grayLuma;
+> > >   if(form){
+> > >     grayLuma = dot(col.rgb, vec3(0.299, 0.587, 0.114));
+> > >   }else{
+> > >     grayLuma = dot(col.rgb, vec3(0.2126, 0.7152, 0.0722));
+> > >   }
+> > >   gl_FragColor = vec4(vec3(grayLuma), 1.0);
 > > > }
 > > ```
 
@@ -139,24 +109,18 @@ Hacer click para correr el video.
 > > :Tab title=Codigo
 > >
 > > ```md
-> > > let fingers;
+> > > precision mediump float;
 > > > 
-> > > function setup() {
-> > >   createCanvas(780, 240);
-> > >   fingers = createVideo(['/vc/docs/sketches/fingers.mov', 
-> > >   '/vc/docs/sketches/fingers.webm']);
-> > >   fingers.hide();
-> > > }
+> > > uniform sampler2D texture;
 > > > 
-> > > function draw() {
-> > >   image(fingers, 460, 0);
-> > >   filter(GRAY);
-> > >   image(fingers, 0, 0);
-> > > }
+> > > varying vec4 vVertexColor;
 > > > 
-> > > function mousePressed() {
-> > >   fingers.loop();
-> > >   background(255);
+> > > varying vec2 vTexCoord;
+> > > 
+> > > void main() {
+> > >   vec4 col = texture2D(texture, vTexCoord) * vVertexColor;
+> > >   float grayRGB = dot(col.rgb, vec3(0.333, 0.333, 0.333));
+> > >   gl_FragColor = vec4(vec3(grayRGB), 1.0);
 > > > }
 > > ```
 
