@@ -29,5 +29,5 @@ function draw() {
 			img.pixels[index + 2] = bw;
 		}
 	}
-	img.updatePixels();	
+	img.updatePixels();
 }
