@@ -46,4 +46,3 @@
 > [Nicolas Rodriguez Salguero](/docs/team/Nicolas)
 > [Carlos Daniel Rincon Mora](/docs/team/Carlos)
 > [Mateo Aguilar Cardona](/docs/team/Mateo)
-> [Danny Esteban Garzón Melo](/docs/team/Danny)
