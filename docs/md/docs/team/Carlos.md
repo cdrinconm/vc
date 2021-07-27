@@ -21,11 +21,11 @@ Actualmente no he hecho alguna contribución a ningún proyecto de código abier
 
 ### Velo de Alberti
 
-![Leon Battista Alberti](/docs/sketches/CarlosRincon/Alberti1.jpg)
+![Leon Battista Alberti](/docs/sketches/ImagenesIntegrantes/CarlosRincon/Alberti1.jpg)
 
 Es una técnica que  permite la reducción de escala del natural al dibujo, por medio de una cuadrícula interpuesta formada por hilos gruesos en un tejido de gasa. Fue inventado en el siglo XV por  el arquitecto, matemático y filósofo italiano León Battista Alberti. Alberti es considerado el primer teórico artístico del Renacimiento, interesado en la búsqueda de las reglas, tanto teóricas como prácticas, capaces de orientar el trabajo de los artistas. Algunos historiadores como Gisèle Freund, consideran este aparato uno de los principales antecedentes ideológicos de la aparición de la fotografía. Actualmente una técnica parecida se utiliza para pintar telones escenográficos de gran formato, el diseño original habrá sido seccionado con una cuadrícula, permitiéndonos trasladar cada cuadrado en el telón cuadriculado.
 
-![Leon Battista Alberti](/docs/sketches/CarlosRincon/Alberti2.jpg)
+![Leon Battista Alberti](/docs/sketches/ImagenesIntegrantes/CarlosRincon/Alberti2.jpg)
 
 ### León Battista Alberti
 Fue un arquitecto, secretario personal (abreviador apostólico) de tres papas —Eugenio IV, Nicolás V y Pío II—, humanista, tratadista, matemático y poeta italiano. Además de estas actividades principales, también fue criptógrafo, lingüista, filósofo, músico y arqueólogo. Es uno de los humanistas más polifacéticos e importantes del Renacimiento.
@@ -37,7 +37,7 @@ La clase social con la que Alberti se relacionará es la alta burguesía culta f
 
 Este artilugio permite dibujar con precisión cualquier imagen mediante la ayuda de dos cuadrículas, una situada frente al dibujante y la otra en el papel donde se va a dibujar. Mirando a través de un agujero veremos el objeto a dibujar seccionado en cuadrados, cada uno de los cuales trasladaremos al papel.
 
-![Leon Battista Alberti](/docs/sketches/CarlosRincon/Alberti3.jpg)
+![Leon Battista Alberti](/docs/sketches/ImagenesIntegrantes/CarlosRincon/Alberti3.jpg)
 
 Una de las ventajas de esta tecnica es que se puede emplear sin importar el tamaño del retrato, ya que cualquier paisaje se reduce a
 una cuadricula, y teniendo esta se puede percibir claramente las dimensiones del paisaje completo, sin embargo cuando la imagen a pintar posee muchos detalles, puede volverse un poco tedioso al usar pocos cuadros. Aun asi es un metodo que no ha dejado de usarse 
@@ -48,7 +48,7 @@ hoy en dia, ya que se emplea en muchos lugares sobre todo para los que esta apre
 
 Es el revestimiento de un plano de dos dimensiones con piezas iguales sin dejar huecos y sin que halla solapamiento.
 
-![Cubrimientos en 2D](/docs/sketches/CarlosRincon/cub1.jpeg) ![Cubrimientos en 2D](/docs/sketches/CarlosRincon/cub2.jpg)
+![Cubrimientos en 2D](/docs/sketches/ImagenesIntegrantes/CarlosRincon/cub1.jpeg) ![Cubrimientos en 2D](/docs/sketches/ImagenesIntegrantes/CarlosRincon/cub2.jpg)
 
 ### ¿Cual es la forma mas eficaz para cubrir un plano?
 
@@ -80,14 +80,14 @@ La conjetura del panal de abeja era una conjetura hasta que se demostró y se co
 
 El primer registro de la conjetura se remonta al 36 aC, de Marco Terencio Varrón, pero a menudo se atribuye a Pappus de Alejandría (c. 290 -. C 350). El teorema fue demostrado en 1999 por el matemático Thomas Callister Hales, quien menciona en su obra que hay razones para creer que la conjetura pueda haber estado presente en la mente de los matemáticos antes de Varrón.
 
-![Cubrimientos en 2D](/docs/sketches/CarlosRincon/red.jpg)
+![Cubrimientos en 2D](/docs/sketches/ImagenesIntegrantes/CarlosRincon/red.jpg)
 
 ### ¿Que pasa cuando no es un plano, sino en tercera dimension?
 
 William Thomson, Lord Kelvin digo que la mejor figura es un octaedro truncado, y pareciera que fuese la mejor figura para cubrir
 un espacio en tercera dimension, pero nunca llego a demostrarlo.
 
-![Cubrimientos en 2D](/docs/sketches/CarlosRincon/octaedro.jpg)
+![Cubrimientos en 2D](/docs/sketches/ImagenesIntegrantes/CarlosRincon/octaedro.jpg)
 
 ### William Thomson, Lord Kelvin
 
@@ -101,13 +101,13 @@ Lord Kelvin destacó por sus importantes trabajos en el campo de la termodinámi
 Luego en 1993 dos fisicos, Denis Weaire y Robert Phelan de Trinity College (Dublín), encontraron una mejor figura que el octaedro
 truncado a la cual llamaron "Estructura de Weaire-Phelan", indagando en un problema de encontrar una estructura de espuma eficaz.
 
-![Cubrimientos en 2D](/docs/sketches/CarlosRincon/estructura.png)
+![Cubrimientos en 2D](/docs/sketches/ImagenesIntegrantes/CarlosRincon/estructura.png)
 
 Aun nadie ha encontrado una estructura mejor, ni se ha demostrado que esta se la optima.
 
 Pero aun asi ya tiene un uso, en el edificio de natacion de los juegos olimpicos de Pekin.
 
-![Cubrimientos en 2D](/docs/sketches/CarlosRincon/edificio.jpeg)
+![Cubrimientos en 2D](/docs/sketches/ImagenesIntegrantes/CarlosRincon/edificio.jpeg)
 
 ### Bibliografia
 

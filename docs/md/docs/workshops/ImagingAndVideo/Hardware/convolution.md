@@ -2,32 +2,20 @@
 
 ## Planteamiento del Problema
 
-Aplicar una mascara de convolucion a una imagen usando una matriz "kernel".
-
-## Antecedentes
-
-La matriz de convolución es una matriz de datos que permite, entre otros, detectar bordes, añadir relieves, desenfocar o aumentar la nitidez de una imagen. Con este filtro, se pueden crear filtros personalizados.
-
-### ¿Que es una matriz de convolución?
-
-Es posible hacerse una idea sin usar las herramientas matemáticas que solo conocen unos pocos. Convolución es el tratamiento de una matriz por otra que se llama “kernel”.
-
-El filtro matriz de convolución usa una primera matriz que es la imagen que será tratada. La imagen es una colección bidimensional de píxeles en coordenada rectágular. El kernel usado depende del efecto deseado.
-
-Consideraremos solo las matrices 3x3, son las más usadas y son suficiente para los efectos deseados. Si todos los valores de un kernel se seleccionan a cero, el sistema la considerará como una matriz 3x3.
+Aplicar una mascara de convolucion a una imagen usando una matriz "kernel" por Hardware.
 
 ## Codigo & Resultados
 
-### Imagen Wolverine Original y una Mascara de Convolucion con P5
+### Imagen Mahakala Original y una Mascara de Convolucion con P5
 
 > :Tabs
 > > :Tab title=Original
 > > 
-> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/JsImagesOrigin/WolvOriginal.js, width=720, height=500
+> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/ImagenesOriginales/MahakalaOriginal.js, width=720, height=500
 >
 > > :Tab title=Resultado
 > > 
-> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/convolution.js, width=720, height=500
+> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/Taller3/convolucion.js, width=720, height=500
 >
 > > :Tab title=Codigo
 > >
@@ -100,8 +88,41 @@ Consideraremos solo las matrices 3x3, son las más usadas y son suficiente para 
 > > > }
 > > ```
 
-# Referencias
+### Video Dedos Original y una Mascara de Convolucion con P5
 
-- [GIMP Docs](https://docs.gimp.org/2.6/es/plug-in-convmatrix.html)
+Hacer click para correr el video.
+
+> :Tabs
+> > :Tab title=Original
+> > 
+> > > :P5 sketch=/docs/sketches/ImagenesOriginales/VideoOriginal.js, width=720, height=500
+>
+> > :Tab title=Resultado
+> > 
+> > > :P5 sketch=/docs/sketches/Taller3/ConvolucionVideo.js, width=720, height=500
+>
+> > :Tab title=Codigo
+> >
+> > ```md
+> > > let fingers;
+> > > 
+> > > function setup() {
+> > >   createCanvas(780, 240);
+> > >   fingers = createVideo(['/vc/docs/sketches/fingers.mov', 
+> > >   '/vc/docs/sketches/fingers.webm']);
+> > >   fingers.hide();
+> > > }
+> > > 
+> > > function draw() {
+> > >   image(fingers, 460, 0);
+> > >   filter(GRAY);
+> > >   image(fingers, 0, 0);
+> > > }
+> > > 
+> > > function mousePressed() {
+> > >   fingers.loop();
+> > >   background(255);
+> > > }
+> > ```
 
 > :ToCPrevNext
