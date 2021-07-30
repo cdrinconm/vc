@@ -23,7 +23,7 @@ Consideraremos solo las matrices 3x3, son las más usadas y son suficiente para 
 > :Tabs
 > > :Tab title=Original
 > > 
-> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/Taller1/ImagenesOriginales/WolvOriginal.js, width=720, height=500
+> > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/ImagenesOriginales/WolvOriginal.js, width=720, height=500
 >
 > > :Tab title=Resultado
 > > 

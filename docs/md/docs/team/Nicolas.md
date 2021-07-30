@@ -44,4 +44,6 @@ A variant of the Shepard tabletop illusion was named "Best Illusion of the Year"
 
 ### Bibliografia
 
-- [Shepard tables](https://en.wikipedia.org/wiki/Shepard_tables#:~:text=Shepard%20tables%20)   
+- [Shepard tables](https://en.wikipedia.org/wiki/Shepard_tables#:~:text=Shepard%20tables%20)
+
+> :ToCPrevNext

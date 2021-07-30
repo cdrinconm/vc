@@ -17,7 +17,7 @@ Convertir una imagen a color a escala de grises usando el promedio RGB y Luma po
 > > 
 > > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/Taller3/rgb.js, width=720, height=500
 >
-> > :Tab title=Codigo
+> > :Tab title=Fragment Shader
 > >
 > > ```md
 > > > precision mediump float;
@@ -68,7 +68,7 @@ El resultado es el siguiente:
 > > 
 > > > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/Taller3/luma2.js, width=720, height=500
 >
-> > :Tab title=Codigo
+> > :Tab title=Fragment Shader
 > >
 > > ```md
 > > > precision mediump float;
@@ -106,7 +106,7 @@ Hacer click para correr el video.
 > > 
 > > > :P5 sketch=/docs/sketches/Taller3/RgbVideo.js, width=720, height=500
 >
-> > :Tab title=Codigo
+> > :Tab title=Fragment Shader
 > >
 > > ```md
 > > > precision mediump float;

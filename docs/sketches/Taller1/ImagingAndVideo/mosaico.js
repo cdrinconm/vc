@@ -38,7 +38,7 @@ var imagenes = [];
 function preload() {
   img = loadImage('/vc/docs/sketches/Taller1/ImagingAndVideo/Ryuk.jpg');
   for (var i = 0; i < nomimg.length; i++) {
-    imagenes.push(loadImage("/vc/docs/sketches/Taller1/ImagenesMosaico/" + nomimg[i] + ".jpg"));
+    imagenes.push(loadImage("/vc/docs/sketches/ImagenesMosaico/" + nomimg[i] + ".jpg"));
   }
 }
 

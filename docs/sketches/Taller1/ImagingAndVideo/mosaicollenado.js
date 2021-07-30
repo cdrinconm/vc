@@ -68,7 +68,7 @@ function setup() {
 }
 
 function cargarImagen(nombre, x, y, dim){
-  loadImage("/vc/docs/sketches/Taller1/ImagenesMosaico/" + nombre + ".jpg", img => {
+  loadImage("/vc/docs/sketches/ImagenesMosaico/" + nombre + ".jpg", img => {
     image(img, x, y, dim, dim);
   });
 }

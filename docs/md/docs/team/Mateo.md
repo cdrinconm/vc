@@ -20,3 +20,5 @@ Tengo 25 años y soy estudiante de Ingeniería de Sistemas y Computación. Me gu
 ![Einstein - Monroe](../sketches/ImagenesIntegrantes/MateoAguilar/einstein_monroe.jpg)
 
 Hacen uso de la percepción de detalles a distintas distancias que tienen los humanos para mostrar imágenes distintas. Es muy similar al pixel art en donde de cerca se ve una cosa y de lejos otra.
+
+> :ToCPrevNext
